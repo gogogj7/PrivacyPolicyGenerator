@@ -1,0 +1,158 @@
+<style>
+  
+
+.container {
+    padding-top: 60px;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#copy {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+}
+
+  </style>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Bootstrap CSS -->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     
+
+
+    <!-- body start  -->
+    <div class="container">
+
+
+       
+                
+                
+                    <!-- form start  -->
+                    <form id="form">
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" class="form-control" id="cname" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label>Website Name</label>
+                            <input type="text" class="form-control" id="wname" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Website Url</label>
+                            <input type="text" class="form-control" id="wurl" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Id</label>
+                            <input type="text" class="form-control" id="email" required>
+                        </div>
+                        <br>
+                        <button type="submit" id="btn" class="btn btn-primary">Create Privay policy</button>
+                    </form>
+                    <!-- form end  -->
+                </div>
+
+
+
+                <div class="form-group mt-5">
+                    <label for="exampleFormControlTextarea1">Your Privacy policy code Here</label>
+                    <textarea class="form-control" id="scode" rows="3"></textarea>
+                    <br><br>
+                    <button class="btn btn-success" id="copy" onclick="myFunction()">Copy Html code</button>
+
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <!-- how to use start  -->
+                <div class="use container">
+                    <!-- ///////////////////////////////////////
+////////////////////////??? how to use artical here peast ???///////////////// -->
+
+
+
+                     </div>
+    </div>
+</div>
+    <!-- body end  -->
+
+  
+
+  
+    <script>
+        function myFunction() {
+            var copyText = document.getElementById("scode");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+            swal("Success", "copy code on your clipbord", "success");
+        }
+        $(document).ready(function() {
+
+
+            // enter your url 
+
+
+            var myurl = "https://liteblogging.com/privacy-policy-generator/";
+
+            // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+            $('#btn').on('click', function(e) {
+                e.preventDefault();
+
+                var cname = $('#cname').val();
+                var wname = $('#wname').val();
+                var wurl = $('#wurl').val();
+                var email = $('#email').val();
+                var code = "<h1>Privacy Policy for " + wname + "</h1><p>At " + wname + ", accessible from ," + wurl + " one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by " + wurl + " and how we use it.</p><p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p><p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in " + wurl + ". This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href='" + myurl + "'>Privacy Policy Generator</a>.</p><h2>Consent</h2><p>By accessing and using our website, you confirm that you have read, understood, and agree to this Privacy Policy and to our Terms of Use. If you do not agree to the terms outlined in this Privacy Policy, please do not use our website.</p><h2>Information we collect</h2><p>We may collect personal information such as your name, email address, IP address, and any other information you voluntarily provide to us through forms, surveys, or other means. We may also collect non-personal information, such as your browser type, device type, and information about your interaction with the website.</p><h2>How we use your information</h2><p>The information we collect is used to provide and improve our services, to respond to your inquiries and requests, to send you communications, and for other purposes as outlined in this policy. We may also use your personal information for marketing purposes, including sending you promotions and updates about our services. We use the information we collect in various ways, including to:</p><ul> <li>Provide, operate, and maintain our webste</li> <li>Improve, personalize, and expand our webste</li> <li>Understand and analyze how you use our webste</li> <li>Develop new products, services, features, and functionality</li> <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the webste, and for marketing and promotional purposes</li> <li>Send you emails</li> <li>Find and prevent fraud</li></ul><h2>Log Files</h2><p>" + wurl + " follows a standard procedure of using log files. We may collect information through log files, which may include your IP address, browser type, and information about your interaction with the website. This information is used to monitor website usage and improve the website experience for users.</p><h2>Advertising Partners Privacy Policies</h2><P>You may consult this list to find the Privacy Policy for each of the advertising partners of " + wurl + ".</p><p>Our website may contain advertisements from third-party advertisers. These advertisers may collect information about your use of the website through the use of cookies, web beacons, and other technologies. We encourage you to review the privacy policies of our advertising partners to understand their data collection and use practices.</p><p>Note that " + wurl + " has no access to or control over these cookies that are used by third-party advertisers.</p><h2>Third Party Privacy Policies</h2><p>" + wurl + "'s Privacy Policy does not apply to other advertisers or websites. Our website may contain links to third-party websites. We are not responsible for the privacy practices of these third-party websites, and we encourage you to review their privacy policies before using their services.</p><h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2><p>California residents have the right to opt-out of the sale of their personal information. You may exercise this right by contacting us at " + email + ". We will respond to your request within 30 days.</p><h2>GDPR Data Protection Rights</h2><p>Residents of the European Union have the right to access, rectify, or delete their personal information, as well as the right to data portability and the right to object to processing. You may exercise these rights by contacting us at " + email + ". We will respond to your request within 30 days.</p><p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p><p>The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.</p><p>The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</p><p>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</p><p>The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.</p><p>The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.</p><p>The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p><p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p><h2>Children's Information</h2><p>Our website is not intended for children under the age of 13, and we do not knowingly collect personal information from children under the age of 13. If we become aware that we have collected personal information from a child under the age of 13, we will take steps to delete such information.</p><h2>Changes to This Privacy Policy</h2><p>This Privacy Policy is subject to change, and we encourage you to review it periodically for any updates. We will post any updates to this policy on our website, and your continued use of our website after any updates indicates your acceptance of the updated policy.</p>";
+                $("#scode").val(code);
+            });
+
+
+        });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
